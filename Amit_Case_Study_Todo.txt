@@ -60,14 +60,36 @@ total_bc_limit can be dropped
 total_il_high_credit_limit can be dropped
 
 Total columns dropped are 54
-About 48.648648648648646 % columns are dropped from Dataframe
+About 49 % columns are dropped from Dataframe
 
+2. Find Columns which have 50% null. Drop them
+mths_since_last_delinq have 25682 null values
+mths_since_last_record have 36931 null values
+next_pymnt_d have 38577 null values
 
 2. Find rows which are null and can be dropped as they dont provide any value to the Analysis
 3. Find rows which are null and can be imputed with values to help in analysis
-4. Find Columns which have some null and decide on way forward as to what needs to be done for them.
-5. Find columns which are textual in natire and do no have any effect on the analysis
+
+4. Find rows which do not contribute anything to the analysis.
+In column 'loan_status' the value 'Current' does not have any effect to the analysis as the analysis is targeted towards new applicants and not currently ongoing loans. So these rows can be dropped.
+
+
+5. Find columns which do no have any effect on the analysis
+Columns url,title,emp_title,desc does not contribute to analysis. They are dropped
+pymnt_plan does not have any meaningful value.
+zip_code does not have any meaningful value
+
+
 6. Identify the columns which needs adjustments in datatype. May be string manipulation or ommisson is required.
+
+emp_length column is adjusted to remove 'years'. Further 10+ years is adjusted as 10. Also all the Null values are imputed as 10. Adjust from float to int
+temp column is adjusted to remove 'months'. Datatype is changed to int
+int_rate column is adjusted to remove '%'
+issue_d columns is adjusted to converted to datetime
+earliest_cr_line is adjusted to datetime.
+
+
+
 7. Introduce new columns which can help in analysis. Probably from Date datatype
 8. Identify outliers in the column and try to remove them or adjust them.
 9. Check for duplicacy of data.
