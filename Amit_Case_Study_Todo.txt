@@ -1,0 +1,111 @@
+EDA for Lending Clud case study
+
+Data Cleaning
+
+1. Find Columns which are completely null and then drop them
+
+mths_since_last_major_derog can be dropped
+annual_inc_joint can be dropped
+dti_joint can be dropped
+verification_status_joint can be dropped
+tot_coll_amt can be dropped
+tot_cur_bal can be dropped
+open_acc_6m can be dropped
+open_il_6m can be dropped
+open_il_12m can be dropped
+open_il_24m can be dropped
+mths_since_rcnt_il can be dropped
+total_bal_il can be dropped
+il_util can be dropped
+open_rv_12m can be dropped
+open_rv_24m can be dropped
+max_bal_bc can be dropped
+all_util can be dropped
+total_rev_hi_lim can be dropped
+inq_fi can be dropped
+total_cu_tl can be dropped
+inq_last_12m can be dropped
+acc_open_past_24mths can be dropped
+avg_cur_bal can be dropped
+bc_open_to_buy can be dropped
+bc_util can be dropped
+mo_sin_old_il_acct can be dropped
+mo_sin_old_rev_tl_op can be dropped
+mo_sin_rcnt_rev_tl_op can be dropped
+mo_sin_rcnt_tl can be dropped
+mort_acc can be dropped
+mths_since_recent_bc can be dropped
+mths_since_recent_bc_dlq can be dropped
+mths_since_recent_inq can be dropped
+mths_since_recent_revol_delinq can be dropped
+num_accts_ever_120_pd can be dropped
+num_actv_bc_tl can be dropped
+num_actv_rev_tl can be dropped
+num_bc_sats can be dropped
+num_bc_tl can be dropped
+num_il_tl can be dropped
+num_op_rev_tl can be dropped
+num_rev_accts can be dropped
+num_rev_tl_bal_gt_0 can be dropped
+num_sats can be dropped
+num_tl_120dpd_2m can be dropped
+num_tl_30dpd can be dropped
+num_tl_90g_dpd_24m can be dropped
+num_tl_op_past_12m can be dropped
+pct_tl_nvr_dlq can be dropped
+percent_bc_gt_75 can be dropped
+tot_hi_cred_lim can be dropped
+total_bal_ex_mort can be dropped
+total_bc_limit can be dropped
+total_il_high_credit_limit can be dropped
+
+Total columns dropped are 54
+About 49 % columns are dropped from Dataframe
+
+2. Find Columns which have 50% null. Drop them
+mths_since_last_delinq have 25682 null values
+mths_since_last_record have 36931 null values
+next_pymnt_d have 38577 null values
+
+2. Find rows which are null and can be dropped as they dont provide any value to the Analysis
+3. Find rows which are null and can be imputed with values to help in analysis
+
+4. Find rows which do not contribute anything to the analysis.
+In column 'loan_status' the value 'Current' does not have any effect to the analysis as the analysis is targeted towards new applicants and not currently ongoing loans. So these rows can be dropped.
+
+
+5. Find columns which do no have any effect on the analysis
+Columns url,title,emp_title,desc does not contribute to analysis. They are dropped
+pymnt_plan does not have any meaningful value.
+zip_code does not have any meaningful value
+
+
+6. Identify the columns which needs adjustments in datatype. May be string manipulation or ommisson is required.
+
+emp_length column is adjusted to remove 'years'. Further 10+ years is adjusted as 10. Also all the Null values are imputed as 10. Adjust from float to int
+temp column is adjusted to remove 'months'. Datatype is changed to int
+int_rate column is adjusted to remove '%'
+issue_d columns is adjusted to converted to datetime
+earliest_cr_line is adjusted to datetime.
+
+
+
+7. Introduce new columns which can help in analysis. Probably from Date datatype
+8. Identify outliers in the column and try to remove them or adjust them.
+9. Check for duplicacy of data.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
