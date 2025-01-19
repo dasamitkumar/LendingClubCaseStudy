@@ -78,6 +78,32 @@ In column 'loan_status' the value 'Current' does not have any effect to the anal
 Columns url,title,emp_title,desc does not contribute to analysis. They are dropped
 pymnt_plan does not have any meaningful value.
 zip_code does not have any meaningful value
+'id' does not have any meaningful value
+'member_id' does not have any meaningful value
+initial_list_status does not have any meaningful value as there is only one value
+out_prncp does not have any meaningful value as there is only one value
+collection_recovery_fee is dropped as it comes after loan is charged-off
+recoveries is dropped as it comes after loan is charged-off
+last_credit_pull_d is dropped as it does not have significance to the analysis.
+
+** open_acc can be dropped as it does not specify any significance to the analysis
+pub_rec can be dropped as value is 0 for 36507 rows which is more than 94% of data
+pub_rec_bankruptcies be dropped as value is 0 for 36238 rows which is more than 94% of data
+policy_code can be dropped as it has only one value 1.
+application_type can be dropped as it has only one value 'INDIVIDUAL'
+acc_now_delinq can be dropped as it has only one value 0
+delinq_amnt can be dropped as it has only one value 0
+tax_liens can be dropped as it has only one value 0.0
+chargeoff_within_12_mths can be dropped as it has only one value 0.0
+collections_12_mths_ex_med can be dropped as it has only one value 0.0
+earliest_cr_line can be dropped as it does not have impact on the analysis. It has values like 2066,2065 which does not make any sense.
+
+** Need to check in more detail whats the use of it**
+
+revol_bal - 
+revol_util - 
+collections_12_mths_ex_med - 
+delinq_2yrs - (It can be dropped as 34386 records is 0. It is about 90% of records)
 
 
 6. Identify the columns which needs adjustments in datatype. May be string manipulation or ommisson is required.
@@ -87,12 +113,18 @@ temp column is adjusted to remove 'months'. Datatype is changed to int
 int_rate column is adjusted to remove '%'
 issue_d columns is adjusted to converted to datetime
 earliest_cr_line is adjusted to datetime.
-
+last_pymnt_d is adjusted to datetime.
 
 
 7. Introduce new columns which can help in analysis. Probably from Date datatype
 8. Identify outliers in the column and try to remove them or adjust them.
 9. Check for duplicacy of data.
+10. Check for rows whose values need changes and can be imputed with another values.
+verification_status - change the value Source Verified to Verified
+home_ownership - There are only 3 rows with value NONE which can be safely changed to OTHER.
+
+
+
 
 
 
