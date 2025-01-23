@@ -36,10 +36,10 @@ The dataset is provided by the business which corresponds to about 40k loan appl
 
 
 ## Technologies Used
-Python
-Matplotlib
-Seaborn
-Pandas
+- Python
+- Matplotlib
+- Seaborn
+- Pandas
 
 <!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
 
