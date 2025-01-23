@@ -16,6 +16,12 @@
 - What is the business probem that your project is trying to solve?
 - What is the dataset that is being used?
 
+The objective of the exercose is to identify factors or parameters which can potentially lead to a loan in 'charged off' status to reduce the financial loss. The case study would be done using Exploratory Data Analysis (EDA) on the provided dataset loan.csv. 
+
+As an outcome, the Case study will provide strong indicators which the Institution can use to reject a loan application as a potential defaulter.
+
+The dataset is provided by the business which corresponds to about 40k loan applicants, with mixed statuses "Fully-Paid", "Charged-Off" and "Current". We will filter only the "Charged-Off" rows as we have to determine drivers for defaulters.
+
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 ## Conclusions
@@ -28,21 +34,16 @@
 
 
 ## Technologies Used
-- library - version 1.0
-- library - version 2.0
-- library - version 3.0
+Python
+Matplotlib
+Seaborn
+Pandas
 
 <!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
 
 ## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
+upGrad EDA module
 
-
-## Contact
-Created by [@githubusername] - feel free to contact me!
 
 
 <!-- Optional -->
