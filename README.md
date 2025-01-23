@@ -11,10 +11,6 @@
 <!-- You can include any other section that is pertinent to your problem -->
 
 ## General Information
-- Provide general information about your project here.
-- What is the background of your project?
-- What is the business probem that your project is trying to solve?
-- What is the dataset that is being used?
 
 The objective of the exercose is to identify factors or parameters which can potentially lead to a loan in 'charged off' status to reduce the financial loss. The case study would be done using Exploratory Data Analysis (EDA) on the provided dataset loan.csv. 
 
