@@ -1,5 +1,9 @@
 # LendingClubCaseStudy 
-> Outline a brief description of your project.
+> Problem Statement
+A consumer finance company is in business of lending various types of loans to urban consumers for various requirements like personal loans, business loans, and financing of medical procedures. Company would like to understand the driving parameters which result in a customer to default the loan payment. The company can utilise this knowledge for its portfolio and risk assessment. 
+
+> Objective of Case study
+The objective of the exercise is to identify factors or parameters which can potentially lead to a loan in 'charged off' status to reduce the financial loss. The case study would be done using Exploratory Data Analysis (EDA) on the provided dataset loan.csv. As an outcome, the Case study will provide strong indicators which the Institution can use to reject a loan application as a potential defaulter.
 
 
 ## Table of Contents
