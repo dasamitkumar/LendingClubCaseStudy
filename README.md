@@ -25,12 +25,18 @@ The dataset is provided by the business which corresponds to about 40k loan appl
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 ## Conclusions
+
+Top Influencers
+
 1. Loan Interest Rates - Most of the defaulters are between 11% to 16%, which indicates financial stress induced due to the higher interest rates. The company should strive to reduce the interest rates wherever possible to reduce probability of defaulting.
 2. DTI - High DTI means applicant have more debt which translates to increased financial burden. Company carefully study the creditworthiness of such individuals who have high DTI. Individuals with 15% and above should be avoided.
 3. Annual Income - From provided data we see that most of the defaulters are in bracket of $40k-$60k. Company should evaluate these individuals who fall in this bracket of annual income.
 4. Loan Grades and Sub-Grades - Loans granted to B,C,D amount to majority of defaulters. So, the firm should exercise caution while granting loans to applicants falling in this category. Futher, the company pay attention to applicants who fall in the subgrades B3, B4, B5, C1, C2 as they have tendency to default frequently.
 5. Loan Purpose - Loan Purpose of Debt-Consolidation is highest in the defaulters. Loan purposes like "educational," "renewable_energy," and "small_business" have a very low number of observations among charged-off loans. Firm should refrain from granting loans to individuals having debt_consolidation as purpose.
 6. Loan Term - Considering 36 months are defaulting more, so Company should device more evaluation while granting short term loan of 3 years.
+
+Ancillary
+
 7. Verification Status - It is interesting to note that the number of defaulters are more in case of "Verified" individuals. This indicates that company should strengthen the overall verification process.
 8. Employment Length - From the data it is evident that applicants who have 10+ years of experience tend to default more. This indicates that experience or employment legth may not give a very indicator or creditworthiness of the individual. Company should more closely evaluate the credit scores of such individuals.
 9. House Ownrship - From the data it is clear that individuals in "Rented" house tend to default, indicating that such indiviuals find it difficult in managing Rent and Installaments simultaneously.
